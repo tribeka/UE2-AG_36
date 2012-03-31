@@ -6,10 +6,11 @@ import java.util.Date;
 
 public class Spielfeld implements Serializable {
 
-    private Spieler[] Player;
+    public Spieler[] Player;
+    private int cntPlayer;
     private String Leader;
     private int Round;
-    private Date Starttime;
+    private long Starttime;
     private int currentPlayer;
     
     /* Felder: int
@@ -41,6 +42,10 @@ public class Spielfeld implements Serializable {
         Startarea = new int[4][4];
         Finisharea = new int[4][4];
         
+        Player = new Spieler[4];
+        cntPlayer = 0;
+        Round = 0;
+        Starttime = new Date().getTime();
     }
     
     public String getLeader() {
@@ -49,6 +54,16 @@ public class Spielfeld implements Serializable {
     
     public void setLeader(String value) {
         Leader = value;
+    }
+    
+    public int getRound() { return Round; }
+    
+    public int getcntPlayer() { return cntPlayer; }
+    
+    public String getTime() {
+        long time = new Date().getTime();
+        time = time - Starttime;
+        return (time/(1000 * 60)) + " min " + (time/1000) + " sec";
     }
     
     public int getPlayarea(int index) {

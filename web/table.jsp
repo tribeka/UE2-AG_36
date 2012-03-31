@@ -46,7 +46,7 @@
 							</tr>
 							<tr>
 								<th>Anzahl Spieler</th>
-								<td>2</td>
+								<td><%= spielfeld.getcntPlayer() %></td>
 							</tr>
 							<tr>
 								<th>F&uuml;hrender</th>
@@ -54,11 +54,11 @@
 							</tr>
 							<tr>
 								<th>Aktuelle Runde</th>
-								<td>1</td>
+								<td><%= spielfeld.getRound() %></td>
 							</tr>
 							<tr>
 								<th>Zeit</th>
-								<td>0 min, 0 sec</td>
+								<td><%= spielfeld.getTime() %></td>
 							</tr>
 						</tbody>
 					</table>
@@ -71,19 +71,19 @@
 							</tr>
 							<tr>
 								<th>Spieler 1</th>
-								<td>Super Mario</td>
+								<td><%= /*spielfeld.Player[0].getName()*/ "Spieler1" %></td>
 							</tr>
 							<tr>
 								<th>Spieler 2</th>
-								<td>Bowser</td>
+								<td><%= /* spielfeld.Player[1].getName()*/ "Spieler2" %></td>
 							</tr>
 							<tr>
 								<th>Spieler 3</th>
-								<td>Luigi</td>
+								<td><%= /* spielfeld.Player[2].getName()*/ "Spieler3" %></td>
 							</tr>
 							<tr>
 								<th>Spieler 4</th>
-								<td>Yoshi</td>
+								<td><%= /* spielfeld.Player[3].getName()*/ "Spieler4" %></td>
 							</tr>
 						</tbody>
 					</table>

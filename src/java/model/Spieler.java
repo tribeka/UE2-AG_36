@@ -7,18 +7,15 @@ public class Spieler implements Serializable {
     
     private String Name;
     private int LastDie;
-    private int ID;
     
     public Spieler() {
-        Name = "unset";
-        ID = -1;
+        Name = " ";
         LastDie = 0;
     }
     
     
-    public Spieler(String nm, int id) {
+    public Spieler(String nm) {
         Name = nm;
-        ID = id;
         LastDie = 0;
     }
     
@@ -26,12 +23,8 @@ public class Spieler implements Serializable {
         return Name;
     }
     
-    /*public void setName(String value) {
+    public void setName(String value) {
         Name = value;
-    } */
-    
-    public int getID() {
-        return ID;
     }
     
     public int getLastDie() {

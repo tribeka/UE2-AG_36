@@ -5,8 +5,6 @@ import java.io.Serializable;
 
 public interface Feld extends Serializable {
     
-
-    
     public void setContent(Spieler player);
     
     public Spieler getContent();

@@ -43,12 +43,14 @@ class SpielfeldImpl implements Spielfeld {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public Iterator<Feld> getStartIter() {
+    public Iterator<Feld> getStartIter(Spieler player) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public Iterator<Feld> getFinishIter() {
+    public Iterator<Feld> getFinishIter(Spieler player) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
+
+    
     
 }

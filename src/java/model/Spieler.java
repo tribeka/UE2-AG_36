@@ -2,36 +2,26 @@ package model;
 
 import java.beans.*;
 import java.io.Serializable;
+import java.util.Stack;
 
 public class Spieler implements Serializable {
     
     private String Name;
-    private int LastDie;
+    
+    public Stack<Integer> LastDies;
     
     public Spieler() {
-        Name = " ";
-        LastDie = 0;
+        Name = "";
+        LastDies = new Stack<Integer>();
     }
     
     
     public Spieler(String nm) {
         Name = nm;
-        LastDie = 0;
+        LastDies = new Stack<Integer>();
     }
     
-    public String getName() {
-        return Name;
-    }
+    public String getName() { return Name; }
     
-    public void setName(String value) {
-        Name = value;
-    }
-    
-    public int getLastDie() {
-        return LastDie;
-    }
-    
-    public void setLastDie(int die) {
-        LastDie = die;
-    }
+    public void setName(String value) { Name = value; }
 }

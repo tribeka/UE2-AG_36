@@ -1,5 +1,5 @@
 <%@page contentType="application/xhtml+xml" pageEncoding="UTF-8"%>
-<jsp:useBean id="spielfeld" class="model.Spielfeld" scope="session" />
+<jsp:useBean id="spielfeld" class="model.Spielfeld_old" scope="session" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
@@ -160,7 +160,7 @@
 								<li><img id='field50' src='img/field3<%= spielfeld.getStartareaImage(2,1) %>.png' alt='Feld 50: Startfeld Spieler 3<%= spielfeld.getStartareaText(2,1) %>' title='Feld 50: Startfeld Spieler 3<%= spielfeld.getStartareaText(2,1) %>' /></li>
 								<li><img id='field51' src='img/field3<%= spielfeld.getStartareaImage(2,2) %>.png' alt='Feld 51: Startfeld Spieler 3<%= spielfeld.getStartareaText(2,2) %>' title='Feld 51: Startfeld Spieler 3<%= spielfeld.getStartareaText(2,2) %>' /></li>
 								<li><img id='field52' src='img/field3<%= spielfeld.getStartareaImage(2,3) %>.png' alt='Feld 52: Startfeld Spieler 3<%= spielfeld.getStartareaText(2,3) %>' title='Feld 52: Startfeld Spieler 3<%= spielfeld.getStartareaText(2,3) %>' /></li>
-							</ol>
+							</ol>   
 							<ol title="Starthaus Spieler 4">	
 								<li><img id='field53' src='img/field4<%= spielfeld.getStartareaImage(3,0) %>.png' alt='Feld 53: Startfeld Spieler 4<%= spielfeld.getStartareaText(3,0) %>' title='Feld 53: Startfeld Spieler 4<%= spielfeld.getStartareaText(3,0) %>' /></li>
 								<li><img id='field54' src='img/field4<%= spielfeld.getStartareaImage(3,1) %>.png' alt='Feld 54: Startfeld Spieler 4<%= spielfeld.getStartareaText(3,1) %>' title='Feld 54: Startfeld Spieler 4<%= spielfeld.getStartareaText(3,1) %>' /></li>

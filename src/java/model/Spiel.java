@@ -23,7 +23,7 @@ public class Spiel implements Serializable {
             Player.add(new Spieler());
         }
         
-        Playarea = new Spielfeld();
+        Playarea = new SpielfeldImpl();
         
         Round = 0;
         Over = false;

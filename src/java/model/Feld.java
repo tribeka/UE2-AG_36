@@ -13,7 +13,8 @@ public interface Feld extends Serializable {
     
     public Boolean isLastField();
     
-    public void setOwner(Spieler player);
+    //Owner ändert sich nach erstellen des Spielfelds nie, muss nicht public sein
+   // public void setOwner(Spieler player);
     
     public Spieler getOwner();
 }

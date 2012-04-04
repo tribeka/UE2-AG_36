@@ -5,7 +5,8 @@ import java.io.Serializable;
 
 public interface Feld extends Serializable {
     
-    public void setContent(Spieler player);
+  //  Verwendet stattdessen SpielFeld.setPlayerToField
+  //  public void setContent(Spieler player);
     
     public Spieler getContent();
     
@@ -16,5 +17,5 @@ public interface Feld extends Serializable {
     //Owner ändert sich nach erstellen des Spielfelds nie, muss nicht public sein
    // public void setOwner(Spieler player);
     
-    public Spieler getOwner();
+    public PlayerColor getOwner();
 }

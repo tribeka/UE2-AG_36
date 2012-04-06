@@ -215,7 +215,6 @@ class SpielfeldImpl implements Spielfeld {
             if(current.isLastField() && current.getOwner() == c)
             {
                 current = current.getNextFinish();
-                distance = 0;
                 break;
             }
             

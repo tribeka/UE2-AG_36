@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import java.util.Iterator;
+import java.util.Vector;
 
 import model.Spieler;
 import model.Spielfeld;
@@ -18,12 +19,13 @@ public class Spiel implements Serializable {
     private Boolean Over;
     
     public Spiel() {
-        Player.clear(); //kann ev. weggelassen werden, wenn Spiel immer neu angelegt wird
+        Player = new Vector<Spieler>(4);
+        // Player.clear(); //kann ev. weggelassen werden, wenn Spiel immer neu angelegt wird
         for(int i=0;i<4;i++) {
             Player.add(new Spieler());
         }
         
-        Playarea = new SpielfeldImpl();
+        Playarea = new SpielfeldImpl(Player);
         
         Round = 0;
         Over = false;
@@ -35,7 +37,7 @@ public class Spiel implements Serializable {
     
     public Spieler getLeader() {
         Iterator<Spieler> it = Player.iterator();
-        Spieler plyr, tmpplyr;
+        Spieler plyr = null, tmpplyr;
         Integer dist = 100, temp; //greater than max distance
         do {
             tmpplyr = it.next();
@@ -44,7 +46,7 @@ public class Spiel implements Serializable {
                 dist = temp;
                 plyr = tmpplyr;
             }
-        }while(it.hasNext());
+        } while(it.hasNext());
         return plyr;
     }
     

@@ -140,7 +140,8 @@ public class SpielController extends HttpServlet {
         
         // Gegner geschlagen?
         if (newField.getContent() != null) {
-                
+          // Set the other player on a start field
+          game.Playarea.resetPlayer(newField.getContent());
         }
         
         // Spielzug durchfuehren

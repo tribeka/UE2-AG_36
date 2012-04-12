@@ -131,12 +131,9 @@ public class SpielController extends HttpServlet {
     }// </editor-fold>
 
     private void spielzug(Spiel game, Spieler player, int wurf) {
-        Feld newField = game.Playarea.getNewField(player, Integer.valueOf(wurf));
         
-        // gewonnen?
-        if (newField.isLastField()) {
-          game.gameOver();
-        }
+        
+        Feld newField = game.Playarea.getNewField(player, Integer.valueOf(wurf));
         
         // Gegner geschlagen?
         if (newField.getContent() != null) {
@@ -146,5 +143,10 @@ public class SpielController extends HttpServlet {
         
         // Spielzug durchfuehren
         game.Playarea.setPlayerToField(player, newField);
+        
+        // gewonnen?
+        if (game.Playarea.isPlayerFinished(player)) {
+          game.gameOver();
+        }
     }
 }

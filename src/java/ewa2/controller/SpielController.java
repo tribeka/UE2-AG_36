@@ -62,7 +62,7 @@ public class SpielController extends HttpServlet {
             
             // spielzug
             this.spielzug(game, humanPlayer, wurf);
-            humanPlayer.LastDies.add(wurf);
+            humanPlayer.LastDies.offer(wurf);
             
             // if wuerfel == 6, zurueck zur view, da Spieler nochmals an der Reihe ist
             if ((wurf != 6) && (!game.isOver())) {
@@ -74,7 +74,7 @@ public class SpielController extends HttpServlet {
                     this.spielzug(game, computerPlayer, wurf);
                 
                     // if wuerfel == 6, nochmals
-                    computerPlayer.LastDies.add(wurf);
+                    computerPlayer.LastDies.offer(wurf);
                 } while ((wurf == 6) && (!game.isOver()));
             
                 // neue Runde - zurueck zur view

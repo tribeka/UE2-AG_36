@@ -2,23 +2,23 @@ package model;
 
 import java.beans.*;
 import java.io.Serializable;
-import java.util.Stack;
+import java.util.LinkedList;
 
 public class Spieler implements Serializable {
     
     private String Name;
     
-    public Stack<Integer> LastDies;
+    public LinkedList<Integer> LastDies;
     
     public Spieler() {
         Name = "";
-        LastDies = new Stack<Integer>();
+        LastDies = new LinkedList<Integer>();
     }
     
     
     public Spieler(String nm) {
         Name = nm;
-        LastDies = new Stack<Integer>();
+        LastDies = new LinkedList<Integer>();
     }
     
     public String getName() { return Name; }

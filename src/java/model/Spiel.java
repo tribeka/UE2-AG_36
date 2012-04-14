@@ -21,9 +21,12 @@ public class Spiel implements Serializable {
     public Spiel() {
         Player = new Vector<Spieler>(4);
         // Player.clear(); //kann ev. weggelassen werden, wenn Spiel immer neu angelegt wird
-        for(int i=0;i<4;i++) {
+        for(int i=0;i<2;i++) {
             Player.add(new Spieler());
         }
+        
+        Player.get(0).setName("Super Mario");
+        Player.get(1).setName("Computer");
         
         Playarea = new SpielfeldImpl(Player);
         
@@ -59,4 +62,6 @@ public class Spiel implements Serializable {
     }
     
     public void newRound() { Round++; }
+    
+    public int getRound() { return Round; }
 }

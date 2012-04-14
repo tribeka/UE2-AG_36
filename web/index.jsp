@@ -12,6 +12,11 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Mensch &auml;rgere dich nicht</h1>
+        
+        <form method="post" action="start">
+            <input type="hidden" name="action" value="start" />
+            <input type="submit" name="submit" value="Starten" />
+        </form>
     </body>
 </html>

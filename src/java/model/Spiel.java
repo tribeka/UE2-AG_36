@@ -58,7 +58,7 @@ public class Spiel implements Serializable {
     public String getTime() {
         long time = new Date().getTime();
         time = time - Starttime;
-        return (time/(1000 * 60)) + " min " + (time/1000) + " sec";
+        return (time/(1000 * 60)) + " min " + ((time/1000) % 60) + " sec";
     }
     
     public void newRound() { Round++; }

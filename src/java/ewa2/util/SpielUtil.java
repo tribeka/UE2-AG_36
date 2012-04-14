@@ -56,7 +56,7 @@ public class SpielUtil {
         }
             
         if(field.getContent() != null) {
-            ret += ": Spieler";
+            ret += ": Spieler ";
             ret += PlayerColorToNumber(spielfeld.getPlayerColor(field.getContent()));
         }
         return ret;
@@ -79,7 +79,7 @@ public class SpielUtil {
 
             
         if(field.getContent() != null) {
-            ret += ": Spieler";
+            ret += ": Spieler ";
             ret += PlayerColorToNumber(spielfeld.getPlayerColor(field.getContent()));
         }
         
@@ -103,7 +103,7 @@ public class SpielUtil {
 
             
         if(field.getContent() != null) {
-            ret += ": Spieler";
+            ret += ": Spieler ";
             ret += PlayerColorToNumber(spielfeld.getPlayerColor(field.getContent()));
         }
         

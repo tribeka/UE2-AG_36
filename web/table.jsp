@@ -1,3 +1,4 @@
+<?xml version="1.0" ?>
 <%@page import="model.PlayerColor"%>
 <%@page contentType="application/xhtml+xml" pageEncoding="UTF-8"%>
 <jsp:useBean id="spiel" class="model.Spiel" scope="session" />

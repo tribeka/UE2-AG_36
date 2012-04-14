@@ -6,6 +6,7 @@ package ewa2.util;
 
 import model.Feld;
 import model.PlayerColor;
+import model.Spielfeld;
 
 /**
  *
@@ -30,19 +31,20 @@ public class SpielUtil {
             return "4";
     }
     
-    public String getPlayareaImage(Feld field) {
+    public String getPlayareaImage(Feld field, Spielfeld spielfeld) {
         String ret = "img/field";
         if(field.isFirstField()) {
             ret += PlayerColorToNumber(field.getOwner());
         }
         if(field.getContent() != null) {
-            //TODO zu ret "_player[NUMMER]" hinzufügen
+            ret += "_player";
+            ret += PlayerColorToNumber(spielfeld.getPlayerColor(field.getContent()));
         }
         ret += ".png";
         return ret;
     }
     
-    public String getPlayareaText(int i, Feld field) {
+    public String getPlayareaText(int i, Feld field, Spielfeld spielfeld) {
         String ret = "Feld " + i;
         if(field.isFirstField()) {
             ret += ": erstes Feld Spieler ";
@@ -54,50 +56,55 @@ public class SpielUtil {
         }
             
         if(field.getContent() != null) {
-            //TODO zu ret ": Spieler [NUMMER]" hinzufügen
+            ret += ": Spieler";
+            ret += PlayerColorToNumber(spielfeld.getPlayerColor(field.getContent()));
         }
         return ret;
     }
     
-    public String getStartareaImage(Feld field) {
+    public String getStartareaImage(Feld field, Spielfeld spielfeld) {
         String ret = "img/field";
         ret += PlayerColorToNumber(field.getOwner());
         if(field.getContent() != null) {
-            //TODO zu ret "_player[NUMMER]" hinzufügen
+            ret += "_player";
+            ret += PlayerColorToNumber(spielfeld.getPlayerColor(field.getContent()));
         }
         ret += ".png";
         return ret;
     }
     
-    public String getStartareaText(int i, Feld field) {
+    public String getStartareaText(int i, Feld field, Spielfeld spielfeld) {
         String ret = "Feld " + i + ": Startfeld Spieler ";
         ret += PlayerColorToNumber(field.getOwner());
 
             
         if(field.getContent() != null) {
-            //TODO zu ret ": Spieler [NUMMER]" hinzufügen
+            ret += ": Spieler";
+            ret += PlayerColorToNumber(spielfeld.getPlayerColor(field.getContent()));
         }
         
         return ret;
     }
     
-    public String getFinishareaImage(Feld field) {
+    public String getFinishareaImage(Feld field, Spielfeld spielfeld) {
         String ret = "img/field";
         ret += PlayerColorToNumber(field.getOwner());
         if(field.getContent() != null) {
-            //TODO zu ret "_player[NUMMER]" hinzufügen
+            ret += "_player";
+            ret += PlayerColorToNumber(spielfeld.getPlayerColor(field.getContent()));
         }
         ret += ".png";
         return ret;
     }
     
-    public String getFinishareaText(int i, Feld field) {
+    public String getFinishareaText(int i, Feld field, Spielfeld spielfeld) {
         String ret = "Feld " + i + ": Zielfeld Spieler ";
         ret += PlayerColorToNumber(field.getOwner());
 
             
         if(field.getContent() != null) {
-            //TODO zu ret ": Spieler [NUMMER]" hinzufügen
+            ret += ": Spieler";
+            ret += PlayerColorToNumber(spielfeld.getPlayerColor(field.getContent()));
         }
         
         return ret;

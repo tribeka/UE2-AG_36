@@ -117,7 +117,7 @@
                                                                 Feld field;
                                                                 for(int i=1; it.hasNext(); i++) {
                                                                     field = it.next(); %>
-								<li><img id='field<%= i %>' src='<%= util.getPlayareaImage(field) %>' alt='<%= util.getPlayareaText(i,field) %>' title='<%= util.getPlayareaText(i,field) %>' /></li>
+								<li><img id='field<%= i %>' src='<%= util.getPlayareaImage(field,spiel.Playarea) %>' alt='<%= util.getPlayareaText(i,field,spiel.Playarea) %>' title='<%= util.getPlayareaText(i,field,spiel.Playarea) %>' /></li>
                                                                 <% } %>
 							</ol>
 							<h3 class="accessibility">Starth&auml;user</h3>
@@ -125,28 +125,28 @@
                                                             <% it = spiel.Playarea.getStartIter(PlayerColor.Yellow);
                                                                 for(int i=41; it.hasNext(); i++) {
                                                                     field = it.next(); %>
-								<li><img id='field<%= i %>' src='<%= util.getStartareaImage(field) %>' alt='<%= util.getStartareaText(i,field) %>' title='<%= util.getStartareaText(i,field) %>' /></li>
+								<li><img id='field<%= i %>' src='<%= util.getStartareaImage(field,spiel.Playarea) %>' alt='<%= util.getStartareaText(i,field,spiel.Playarea) %>' title='<%= util.getStartareaText(i,field,spiel.Playarea) %>' /></li>
                                                                 <% } %>
 							</ol>
 							<ol title="Starthaus Spieler 2">
 								<% it = spiel.Playarea.getStartIter(PlayerColor.Green);
                                                                 for(int i=45; it.hasNext(); i++) {
                                                                     field = it.next(); %>
-								<li><img id='field<%= i %>' src='<%= util.getStartareaImage(field) %>' alt='<%= util.getStartareaText(i,field) %>' title='<%= util.getStartareaText(i,field) %>' /></li>
+								<li><img id='field<%= i %>' src='<%= util.getStartareaImage(field,spiel.Playarea) %>' alt='<%= util.getStartareaText(i,field,spiel.Playarea) %>' title='<%= util.getStartareaText(i,field,spiel.Playarea) %>' /></li>
                                                                 <% } %>
                                                         </ol>
 							<ol title="Starthaus Spieler 3">	
 								<% it = spiel.Playarea.getStartIter(PlayerColor.Red);
                                                                 for(int i=49; it.hasNext(); i++) {
                                                                     field = it.next(); %>
-								<li><img id='field<%= i %>' src='<%= util.getStartareaImage(field) %>' alt='<%= util.getStartareaText(i,field) %>' title='<%= util.getStartareaText(i,field) %>' /></li>
+								<li><img id='field<%= i %>' src='<%= util.getStartareaImage(field,spiel.Playarea) %>' alt='<%= util.getStartareaText(i,field,spiel.Playarea) %>' title='<%= util.getStartareaText(i,field,spiel.Playarea) %>' /></li>
                                                                 <% } %>
                                                         </ol>   
 							<ol title="Starthaus Spieler 4">	
 								<% it = spiel.Playarea.getStartIter(PlayerColor.Blue);
                                                                 for(int i=53; it.hasNext(); i++) {
                                                                     field = it.next(); %>
-								<li><img id='field<%= i %>' src='<%= util.getStartareaImage(field) %>' alt='<%= util.getStartareaText(i,field) %>' title='<%= util.getStartareaText(i,field) %>' /></li>
+								<li><img id='field<%= i %>' src='<%= util.getStartareaImage(field,spiel.Playarea) %>' alt='<%= util.getStartareaText(i,field,spiel.Playarea) %>' title='<%= util.getStartareaText(i,field,spiel.Playarea) %>' /></li>
                                                                 <% } %>
                                                         </ol>
 							<h3 class="accessibility">Zielh&auml;user</h3>
@@ -154,28 +154,28 @@
 								<% it = spiel.Playarea.getFinishIter(PlayerColor.Yellow);
                                                                 for(int i=57; it.hasNext(); i++) {
                                                                     field = it.next(); %>
-								<li><img id='field<%= i %>' src='<%= util.getFinishareaImage(field) %>' alt='<%= util.getFinishareaText(i,field) %>' title='<%= util.getFinishareaText(i,field) %>' /></li>
+								<li><img id='field<%= i %>' src='<%= util.getFinishareaImage(field,spiel.Playarea) %>' alt='<%= util.getFinishareaText(i,field,spiel.Playarea) %>' title='<%= util.getFinishareaText(i,field,spiel.Playarea) %>' /></li>
                                                                 <% } %>
                                                         </ol>
 							<ol title="Zielhaus Spieler 2">	
 								<% it = spiel.Playarea.getFinishIter(PlayerColor.Green);
                                                                 for(int i=61; it.hasNext(); i++) {
                                                                     field = it.next(); %>
-								<li><img id='field<%= i %>' src='<%= util.getFinishareaImage(field) %>' alt='<%= util.getFinishareaText(i,field) %>' title='<%= util.getFinishareaText(i,field) %>' /></li>
+								<li><img id='field<%= i %>' src='<%= util.getFinishareaImage(field,spiel.Playarea) %>' alt='<%= util.getFinishareaText(i,field,spiel.Playarea) %>' title='<%= util.getFinishareaText(i,field,spiel.Playarea) %>' /></li>
                                                                 <% } %>
                                                         </ol>
 							<ol title="Zielhaus Spieler 3">		
 								<% it = spiel.Playarea.getFinishIter(PlayerColor.Red);
                                                                 for(int i=65; it.hasNext(); i++) {
                                                                     field = it.next(); %>
-								<li><img id='field<%= i %>' src='<%= util.getFinishareaImage(field) %>' alt='<%= util.getFinishareaText(i,field) %>' title='<%= util.getFinishareaText(i,field) %>' /></li>
+								<li><img id='field<%= i %>' src='<%= util.getFinishareaImage(field,spiel.Playarea) %>' alt='<%= util.getFinishareaText(i,field,spiel.Playarea) %>' title='<%= util.getFinishareaText(i,field,spiel.Playarea) %>' /></li>
                                                                 <% } %>
                                                         </ol>
 							<ol title="Zielhaus Spieler 4">		
 								<% it = spiel.Playarea.getFinishIter(PlayerColor.Blue);
                                                                 for(int i=69; it.hasNext(); i++) {
                                                                     field = it.next(); %>
-								<li><img id='field<%= i %>' src='<%= util.getFinishareaImage(field) %>' alt='<%= util.getFinishareaText(i,field) %>' title='<%= util.getFinishareaText(i,field) %>' /></li>
+								<li><img id='field<%= i %>' src='<%= util.getFinishareaImage(field,spiel.Playarea) %>' alt='<%= util.getFinishareaText(i,field,spiel.Playarea) %>' title='<%= util.getFinishareaText(i,field,spiel.Playarea) %>' /></li>
                                                                 <% } %>
                                                         </ol>
 						</div>

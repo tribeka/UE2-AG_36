@@ -7,6 +7,9 @@ import java.util.Iterator;
 
 public interface Spielfeld extends Serializable {
     
+    //Gibt an, welche Farbe der Spieler auf diesem Spielfeld hat.
+    public PlayerColor getPlayerColor(Spieler p);
+    
     //Gibt das Feld zurück, welches der Spieler erreicht, wenn er distance (>= 1) weiterzieht.
     //Erreicht der Spieler ein Zielfeld, wird das erste erreichte Zielfeld ausgegeben.
     //Befindet sich der Spieler in der Startzone, wird das erste Feld der jeweiligen Farbe zurueckgegeben

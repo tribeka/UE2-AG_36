@@ -309,6 +309,15 @@ class SpielfeldImpl implements Spielfeld {
     public Iterator<Feld> getFinishIter(PlayerColor player) {
         return new FeldIterator(FinishFields.get(player));
     }
+
+    public PlayerColor getPlayerColor(Spieler p) {
+        PlayerColor c = playercolors.get(p);
+        if(c == null)
+            throw new IllegalArgumentException("Invalid player.");
+        
+        return c;
+        
+    }
     
     /////////////////Feld-Klassen / Iteratoren
     

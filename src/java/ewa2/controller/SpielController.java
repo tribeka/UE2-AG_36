@@ -35,6 +35,7 @@ public class SpielController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session;
+        RequestDispatcher dispatcher;
         
         if (request.getParameter("action").equals("start")) {
             // Start a new game
@@ -83,9 +84,11 @@ public class SpielController extends HttpServlet {
         }
         else {
             // action not recognized by controller - do nothing!
+            dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+            dispatcher.forward(request, response);
         }
         // Forward to the table
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/table.jsp");
+        dispatcher = getServletContext().getRequestDispatcher("/table.jsp");
         dispatcher.forward(request, response);
     }
 

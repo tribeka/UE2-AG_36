@@ -132,6 +132,12 @@ public class SpielController extends HttpServlet {
 
     private void spielzug(Spiel game, Spieler player, int wurf) {
         
+        // Spielstart pruefen:
+        if (game.Playarea.isPlayerInStart(player)) {
+            if (wurf != 6) {
+                return;
+            }
+        }
         
         Feld newField = game.Playarea.getNewField(player, Integer.valueOf(wurf));
         

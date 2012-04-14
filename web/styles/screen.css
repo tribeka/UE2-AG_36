@@ -120,6 +120,11 @@ table tbody {
 	display: block;
 }
 
+#dicearea button {
+    background-color: #aaa;
+    border: 0;
+}
+
 #board div.fields {
 	float:left;
 	width:550px;

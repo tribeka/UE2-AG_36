@@ -37,6 +37,13 @@ public class SpielController extends HttpServlet {
         HttpSession session;
         RequestDispatcher dispatcher;
         
+        // check ob eine action übergeben wurde
+        if (request.getParameter("action") == null) {
+            dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+            dispatcher.forward(request, response);
+            return;
+        }
+        
         if (request.getParameter("action").equals("start")) {
             // Start a new game
             session = request.getSession(true);
@@ -86,6 +93,7 @@ public class SpielController extends HttpServlet {
             // action not recognized by controller - do nothing!
             dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
             dispatcher.forward(request, response);
+            return;
         }
         // Forward to the table
         dispatcher = getServletContext().getRequestDispatcher("/table.jsp");
